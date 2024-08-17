@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="describir">
     <meta name="description" content="descripciondetallada">
     <link rel="stylesheet" href="/CSS/main.css">
-    <!-- <script defer src="/JS/reserva.js"></script> -->
     <script defer src="/JS/reservas.js"></script>
     <title>Reservas - Loft</title>
-</head>
-<body>
+  </head>
+
   <body>
-        <header class="header" >
-            <nav class="navbar navbar-expand-lg "> 
-                
-            <div class="container-fluid" >
-              <img class="navbar-brand"  src="/assets/logo.png" alt="logo">            
-    
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse-navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/HTML/loft.html">Loft</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/HTML/experiencias.html">Experiencias</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/HTML/reservas.html">Reservas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/HTML/contacto.html">Contacto</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>    
-        <h1 class="tituloReservas">Reserva de Habitaciones</h1>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <img class="navbar-brand" src="/assets/logo.png" alt="logo">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse-navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/HTML/loft.html">Loft</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/HTML/experiencias.html">Experiencias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/HTML/reservas.html">Reservas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/HTML/contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h1 class="tituloReservas">Reserva de Habitaciones</h1>
     </header>
 
     <section class="inicioReserva">
       <p>Disfruta de una experiencia inolvidable con nosotros.</p>
-  </section>
+    </section>
 
-  <section id="habitaciones">
+    <section id="habitaciones">
       <div id="lista-habitaciones">
         <div class="card-habitacion" style="display: flex; margin: 30px;">
-          <div style="width: 50%;"> 
+          <div style="width: 50%;">
             <img style="width: -webkit-fill-available;" src="/assets/habitacion1.png" alt="Habitación 1">
           </div>
           <div style="width: 50%;background-color: darkseagreen;/* opacity: 30%;">
@@ -66,11 +66,11 @@
                 *resultado reserva
               </div>
             </form>
-            
+
           </div>
         </div>
         <div class="card-habitacion" style="display: flex; margin: 30px;">
-          <div style="width: 50%;"> 
+          <div style="width: 50%;">
             <img style="width: -webkit-fill-available;" src="/assets/habitacion2.png" alt="Habitación 1">
           </div>
           <div style="width: 50%;background-color: darkseagreen;/* opacity: 30%;">
@@ -87,43 +87,10 @@
           </div>
         </div>
       </div>
-
-      
-  </section>
-<!-- 
-  <section id="contacto">
-      <h2>Contáctanos</h2>
-      <form action="submit_form.php" method="post">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
-          
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" required></textarea>
-          
-          <button type="submit">Enviar</button>
-      </form>
-  </section> -->
+    </section>
     <footer>
-        <p>&copy; 2024 Hotel de Lujo. Todos los derechos reservados.</p>
+      <p>&copy; 2024 Hotel de Lujo. Todos los derechos reservados.</p>
     </footer>
+  </body>
 
-    <!-- <script src="script.js"></script> -->
-</body>
-    <!-- <form id="bookingForm">
-        <label for="name">Nombre:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="date">Fecha y hora de la reserva:</label><br>
-        <input type="datetime-local" id="date" name="date" required><br>
-        <input type="submit" value="Enviar">
-      </form>
-      <div id="reservationConfirmation" style="display:none">
-        <h2>¡Su reserva está confirmada!</h2>
-        <p id="reservationDetails"></p> -->
-      </div>
-</body>
 </html>
