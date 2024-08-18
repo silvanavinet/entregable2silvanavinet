@@ -58,7 +58,7 @@ let loginForm2 = document.getElementById("form-habitacion-2");
 
 loginForm1.addEventListener("submit", (e) => {
     e.preventDefault();
-    dates = loginForm1.getElementsByTagName('input')
+    const dates = loginForm1.getElementsByTagName('input')
 
     let mensajeReserva = ''
     mensajeReserva += 'Gracias por su reserva!' + '</br>'
@@ -73,7 +73,7 @@ loginForm1.addEventListener("submit", (e) => {
 
 loginForm2.addEventListener("submit", (e) => {
     e.preventDefault();
-    dates = loginForm2.getElementsByTagName('input')
+   const dates = loginForm2.getElementsByTagName('input')
 
     let mensajeReserva = ''
     mensajeReserva += 'Gracias por su reserva!' + '</br>'
