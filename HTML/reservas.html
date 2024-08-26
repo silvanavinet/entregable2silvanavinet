@@ -56,35 +56,50 @@
             <img style="width: -webkit-fill-available;" src="/assets/habitacion1.png" alt="Habitación 1">
           </div>
           <div style="width: 50%;background-color: darkseagreen;/* opacity: 30%;">
+            <h2>Habitacion 1</h2>
             <form action="" id="form-habitacion-1">
-              <label for="entrada">Entrada</label>
-              <input type="date" id="entrada" name="entrada">
+              <label for="fechaLlegada">Fecha de Llegada:</label>
+              <input type="date" id="fechaLlegada" required>
               <label for="salida">Salida</label>
-              <input type="date" id="salida" name="salida">
-              <input type="submit" value="Reservar">
+              <input type="date" id="fechaSalida" required>
+              <button id="comprobarDisponibilidad">Comprobar Disponibilidad</button>              
+              <input type="submit" value="Pagar">
               <div class="resultado-reserva">
                 *resultado reserva
               </div>
             </form>
-
           </div>
+          <!-- Modal -->
+         <div id="modalFactibilidad" class="modal">
+         <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="mensajeFactibilidad">Mensaje de factibilidad</p>
+      </div>
+  </div>
         </div>
         <div class="card-habitacion" style="display: flex; margin: 30px;">
           <div style="width: 50%;">
             <img style="width: -webkit-fill-available;" src="/assets/habitacion2.png" alt="Habitación 1">
           </div>
           <div style="width: 50%;background-color: darkseagreen;/* opacity: 30%;">
-            <form action="" id="form-habitacion-2">
-              <label for="birthday">Entrada</label>
-              <input type="date" id="salida" name="salida">
-              <label for="birthday">Salida</label>
-              <input type="date" id="entrada" name="entrada">
-              <input type="submit" value="Reservar">
-            </form>
-            <div>
+            <h2>Habitacion 2</h2>
+            <form action="" id="form-habitacion-1">
+              <label for="fechaLlegada">Fecha de Llegada:</label>
+              <input type="date" id="fechaLlegada" required>
+              <label for="salida">Salida</label>
+              <input type="date" id="fechaSalida" required>
+              <button id="comprobarDisponibilidad">Comprobar Disponibilidad</button>              
+              <input type="submit" value="Pagar">
+              <div class="resultado-reserva">
               *resultado reserva
             </div>
           </div>
+            <!-- Modal -->
+         <div id="modalFactibilidad" class="modal">
+          <div class="modal-content">
+           <span class="close">&times;</span>
+           <p id="mensajeFactibilidad">Mensaje de factibilidad</p>
+ 
         </div>
       </div>
     </section>
