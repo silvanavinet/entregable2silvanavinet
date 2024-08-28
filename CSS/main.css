@@ -6,7 +6,7 @@
   }
 
  body {
-    background: url(/assets/hojas.png);
+    background: url(../assets/hojas.png);
     background-size: cover;
     background-repeat: no-repeat;
 } 
@@ -23,6 +23,12 @@ display: none;
   display: flex;
   justify-content: flex-end;
   position: relative;
+}
+
+#navbarSupportedContent{   
+  display: flex;
+    justify-content: flex-end;
+    position: relative;
 }
 .navbar-brand {
     order: 0;

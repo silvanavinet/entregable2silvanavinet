@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "nombre": "Habitación 1",
+      "cama": "dos plazas",
+      "vista": "bosque",
+      "precio": 45000
+    },
+    {
+      "id": 2,
+      "nombre": "Habitación 2",
+      "cama": "dos plazas",
+      "vista": "mar",
+      "precio": 35000
+    }
+  ]
+  

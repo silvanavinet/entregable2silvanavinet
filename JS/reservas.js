@@ -1,10 +1,9 @@
-const habitaciones = [
+const habitacionesLoft = [
     {
       id: 1,
       nombre: "Habitación 1",  
       cama: "dos plazas",
       vista: "bosque",
-      jacuzzy: true,
       precio: 45000
     },
     {
@@ -12,10 +11,21 @@ const habitaciones = [
       nombre: "Habitación 2",
       cama: "dos plazas",
       vista: "mar",
-      jacuzzy: true,
       precio: 35000
     }
 ];
+
+let habitaciones = document.getElementById("habitaciones")
+function renderHabitaciones(habitacionesArray){
+    habitacionesArray.forEach (habitacion => {
+        const card = document.createElement("div")
+        card.innerHTML = `<h3>${habitacion.nombre}</h3>
+                         <p>${habitacion.cama}</p>
+                         <p>${habitacion.vista}</p>
+                         <p>${habitacion.precio}</p>
+                         <button>Agregar</button>`
+    })
+}
 
 /*function pintarHabitación (habitacion){
     let listaHabitaciones = document.getElementById("lista-habitaciones");
