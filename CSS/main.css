@@ -48,7 +48,6 @@ display: none;
     color: #ffefd5;;
     text-decoration: none;
     font-size: 30px;
-    /* text-shadow: 3px 2px 0 black */
   } 
   
   a:hover {
@@ -120,8 +119,6 @@ width: 100px;}
 
 }
 
-/* .row{
-  display: contents; */
 
 .column{
 margin: 10%}
@@ -152,8 +149,8 @@ margin: 10%}
   }
   footer p {
     display: flex;
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
+    align-items: center; /*  vertical */
+    justify-content: center; /*  horizontal */
     margin-bottom: 0;
     font-weight: 700;
     height: 40px;

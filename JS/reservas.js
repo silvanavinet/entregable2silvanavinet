@@ -53,7 +53,6 @@ function renderHabitaciones(habitacionesArray){
 }*/
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Obtener los campos de entrada de fecha
     const fechaLlegadaInput = document.getElementById("fechaLlegada");
     const fechaSalidaInput = document.getElementById("fechaSalida");
     const btnComprobar = document.getElementById("comprobarDisponibilidad");
@@ -61,22 +60,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const spanClose = document.querySelector(".close");
     const mensajeFactibilidad = document.getElementById("mensajeFactibilidad");
     
-    // Obtener la fecha de hoy en el formato YYYY-MM-DD
+
     const hoy = new Date();
     const year = hoy.getFullYear();
     const month = (hoy.getMonth() + 1).toString().padStart(2, '0');
     const day = hoy.getDate().toString().padStart(2, '0');
     const fechaHoy = `${year}-${month}-${day}`;
     
-    // Establecer la fecha mínima para la llegada como hoy
     fechaLlegadaInput.min = fechaHoy;
 
-    // Evento para actualizar la fecha mínima de salida cuando se cambia la fecha de llegada
     fechaLlegadaInput.addEventListener("change", function() {
         fechaSalidaInput.min = fechaLlegadaInput.value;
     });
 
-    // Evento para asegurar que la fecha de salida no sea antes de la fecha de llegada
     fechaSalidaInput.addEventListener("change", function() {
         if (fechaSalidaInput.value < fechaLlegadaInput.value) {
             fechaSalidaInput.value = "";
@@ -84,27 +80,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-// Evento para comprobar disponibilidad
 btnComprobar.addEventListener("click", function() {
-    // Aquí agregas tu lógica para verificar la disponibilidad
-    // Por ahora, asumimos que siempre hay disponibilidad
 
-    // Si hay disponibilidad, muestra el modal
     mostrarModal("Hay disponibilidad para las fechas seleccionadas.");
 });
 
-// Función para mostrar el modal con un mensaje específico
 function mostrarModal(mensaje) {
     mensajeFactibilidad.textContent = mensaje;
     modalFactibilidad.style.display = "block";
 }
 
-// Cierra el modal cuando se hace clic en la "X"
 spanClose.addEventListener("click", function() {
     modalFactibilidad.style.display = "none";
 });
 
-// Cierra el modal si el usuario hace clic fuera del modal
 window.addEventListener("click", function(event) {
     if (event.target == modalFactibilidad) {
         modalFactibilidad.style.display = "none";

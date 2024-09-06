@@ -18,7 +18,6 @@ const habitacionesLoft = [
 ];
 
 
-// Hay que fetchear la data de las habitaciones y alamcenarlo en una variable
 
 let habitaciones = document.getElementById("lista-habitaciones")
 
@@ -45,8 +44,8 @@ function renderHabitaciones(habitacionesArray){
                 <input type="date" id="fechaLlegada" required>
                 <label for="salida">Salida</label>
                 <input type="date" id="fechaSalida" required>
-                <button id="comprobarDisponibilidad">Comprobar Disponibilidad</button>
-                <input id="pagar-button" type="submit" value="Pagar">
+                <button class="button-cancelar" id="comprobarDisponibilidad">Comprobar Disponibilidad</button>
+                <input class="button-cancelar" id="pagar-button" type="submit" value="Pagar">
                 <div class="resultado-reserva">
                   *resultado reserva
                 </div>
@@ -65,22 +64,18 @@ function renderHabitaciones(habitacionesArray){
         const mensajeFactibilidad = card.querySelector("#mensajeFactibilidad");
         const formPagar = card.querySelector("#pagar-button")
         
-        // Obtener la fecha de hoy en el formato YYYY-MM-DD
         const hoy = new Date();
         const year = hoy.getFullYear();
         const month = (hoy.getMonth() + 1).toString().padStart(2, '0');
         const day = hoy.getDate().toString().padStart(2, '0');
         const fechaHoy = `${year}-${month}-${day}`;
         
-        // Establecer la fecha mínima para la llegada como hoy
         fechaLlegadaInput.min = fechaHoy;
     
-        // Evento para actualizar la fecha mínima de salida cuando se cambia la fecha de llegada
         fechaLlegadaInput.addEventListener("change", function() {
             fechaSalidaInput.min = fechaLlegadaInput.value;
         });
     
-        // Evento para asegurar que la fecha de salida no sea antes de la fecha de llegada
         fechaSalidaInput.addEventListener("change", function() {
             if (fechaSalidaInput.value < fechaLlegadaInput.value) {
                 fechaSalidaInput.value = "";
@@ -134,26 +129,21 @@ function renderHabitaciones(habitacionesArray){
 renderHabitaciones(habitacionesLoft)
 
 
-// Obtener los campos de entrada de fecha
 
 
 function setFechaMinima(fechaLlegadaInput, fechaSalidaInput) {
-  // Obtener la fecha de hoy en el formato YYYY-MM-DD
   const hoy = new Date();
   const year = hoy.getFullYear();
   const month = (hoy.getMonth() + 1).toString().padStart(2, '0');
   const day = hoy.getDate().toString().padStart(2, '0');
   const fechaHoy = `${year}-${month}-${day}`;
 
-  // Establecer la fecha mínima para la llegada como hoy
   fechaLlegadaInput.min = fechaHoy;
 
-  // Evento para actualizar la fecha mínima de salida cuando se cambia la fecha de llegada
   fechaLlegadaInput.addEventListener("change", function() {
     fechaSalidaInput.min = fechaLlegadaInput.value;
   });
 
-  // Evento para asegurar que la fecha de salida no sea antes de la fecha de llegada
   fechaSalidaInput.addEventListener("change", function() {
     if (fechaSalidaInput.value < fechaLlegadaInput.value) {
       fechaSalidaInput.value = "";

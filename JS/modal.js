@@ -9,7 +9,6 @@ if ( localStorage.getItem("mis_reservas") == null ){
     localStorage.setItem("mis_reservas", JSON.stringify([]))
 }
 
-// Función para mostrar el modal
 const modal = document.getElementById("modalResumen");
 const btnOpenModal = document.getElementById("openModal");
 const spanClose = document.getElementsByClassName("close")[0];
@@ -19,19 +18,16 @@ const spanClose = document.getElementsByClassName("close")[0];
 //     cargarResumenCompra();
 // }
 
-// Función para cerrar el modal
 spanClose.onclick = function() {
     modal.style.display = "none";
 }
 
-// Cerrar el modal si el usuario hace clic fuera de él
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
 
-// Función para cargar los detalles de la compra en el modal
 function cargarResumenCompra() {
     const detalleCompra = document.getElementById("detalleCompra");
     let total = 0;
@@ -53,7 +49,6 @@ function cargarResumenCompra() {
     document.getElementById("totalCompra").textContent = `$${total.toFixed(2)}`;
 }
 
-// Manejar la confirmación de la compra
 document.getElementById("confirmarCompra").onclick = function() {
     modal.style.display = "none";
     Swal.fire({
@@ -92,3 +87,35 @@ document.getElementById("confirmarCompra").onclick = function() {
 document.getElementById("cancelarCompra").onclick = function() {
     modal.style.display = "none";
 }
+
+
+
+document.getElementById("ageForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    const ageInput = document.getElementById("ageInput").value;
+    const messageDiv = document.getElementById("message");
+    
+    try {
+        messageDiv.innerHTML = ""; 
+
+        if (ageInput === "" || isNaN(ageInput)) {
+            throw new Error("Debe ingresar una edad válida");
+        }
+
+        const edad = parseInt(ageInput);
+
+        if (edad < 18) {
+            Array.from(document.getElementsByClassName("button-cancelar"))
+            .forEach(element => {
+                element.style.display="none"
+            });
+            throw new Error("La persona es menor de 18 años");
+        }
+
+        messageDiv.innerHTML = `<p id="success">La persona es mayor de 18 años.</p>`;
+    } catch (error) {
+        messageDiv.innerHTML = `<p id="error">Error: ${error.message}</p>`;
+    } finally {
+        console.log("Validación de edad finalizada."); 
+    }
+});
