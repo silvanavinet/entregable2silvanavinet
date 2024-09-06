@@ -15,9 +15,10 @@ const habitacionesLoft = [
     }
 ];
 
-let habitaciones = document.getElementById("habitaciones")
+let habitaciones = document.getElementById("lista-habitaciones")
+
 function renderHabitaciones(habitacionesArray){
-    habitacionesArray.forEach (habitacion => {
+    habitacionesArray.forEach ( habitacion => {
         const card = document.createElement("div")
         card.innerHTML = `<h3>${habitacion.nombre}</h3>
                          <p>${habitacion.cama}</p>

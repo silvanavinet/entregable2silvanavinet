@@ -4,14 +4,16 @@
       "nombre": "Habitación 1",
       "cama": "dos plazas",
       "vista": "bosque",
-      "precio": 45000
+      "precio": 45000,
+      "image": "../assets/habitacion1.png"
     },
     {
       "id": 2,
       "nombre": "Habitación 2",
       "cama": "dos plazas",
       "vista": "mar",
-      "precio": 35000
+      "precio": 35000,
+      "image": "../assets/habitacion2.png"
     }
   ]
-  
+ 

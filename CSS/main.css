@@ -43,13 +43,13 @@ display: none;
     display: inline-block;
     padding: 0px 20px;
   }
-  
+
   a {
     color: #ffefd5;;
     text-decoration: none;
     font-size: 30px;
-    text-shadow: 3px 2px 0 black
-  }
+    /* text-shadow: 3px 2px 0 black */
+  } 
   
   a:hover {
     color: rgb(77, 143, 77);
@@ -112,7 +112,19 @@ display: none;
 padding-left: 50px;
 }
 
+.carouselExampleIndicators{
+width: 100px;}
   
+.img-experiencias{
+  width: 100%;
+
+}
+
+/* .row{
+  display: contents; */
+
+.column{
+margin: 10%}
 
 
   footer {
