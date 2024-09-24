@@ -94,6 +94,8 @@ document.getElementById("ageForm").addEventListener("submit", function(event) {
     event.preventDefault(); 
     const ageInput = document.getElementById("ageInput").value;
     const messageDiv = document.getElementById("message");
+    let mostrarFechas = true
+    const formHab = document.querySelectorAll('form#form-habitacion');
     
     try {
         messageDiv.innerHTML = ""; 
@@ -109,13 +111,25 @@ document.getElementById("ageForm").addEventListener("submit", function(event) {
             .forEach(element => {
                 element.style.display="none"
             });
-            throw new Error("La persona es menor de 18 años");
+            throw new Error("La persona es menor de 18 años, no podras continuar con la reserva.");
         }
 
         messageDiv.innerHTML = `<p id="success">La persona es mayor de 18 años.</p>`;
+        mostrarFechas = true
     } catch (error) {
         messageDiv.innerHTML = `<p id="error">Error: ${error.message}</p>`;
+        mostrarFechas = false
     } finally {
         console.log("Validación de edad finalizada."); 
+        if (mostrarFechas) {
+            formHab.forEach(form => {
+                form.style.display = "block";
+            });
+        }
+        else {
+            formHab.forEach(form => {
+                form.style.display = "none";
+            });
+        }
     }
 });

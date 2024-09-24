@@ -23,8 +23,8 @@ let habitaciones = document.getElementById("lista-habitaciones")
 
 function renderHabitaciones(habitacionesArray){
 
-  
-  fetch("/JS/data/habitaciones.json")
+  console.log("renderHabitaciones")
+  fetch("../JS/data/habitaciones.json")
     .then(respuesta => respuesta.json())
     .then(data => { 
 
@@ -125,10 +125,7 @@ function renderHabitaciones(habitacionesArray){
     
 }
 
-
 renderHabitaciones(habitacionesLoft)
-
-
 
 
 function setFechaMinima(fechaLlegadaInput, fechaSalidaInput) {

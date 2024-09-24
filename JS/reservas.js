@@ -28,30 +28,6 @@ function renderHabitaciones(habitacionesArray){
     })
 }
 
-/*function pintarHabitación (habitacion){
-    let listaHabitaciones = document.getElementById("lista-habitaciones");
-
-    listaHabitaciones.innerHTML +=```
-        <div class="card-habitacion" style="display: flex; margin: 30px;">
-                <div style="width: 50%;"> 
-                    <img style="width: -webkit-fill-available;" src="/assets/habitacion1.png" alt="Habitación 1">
-                </div>
-                <div style="width: 50%;background-color: darkseagreen;/* opacity: 30%;">
-                    <form action="" id="form-habitacion-1">
-                    <label for="birthday">Entrada</label>
-                    <input type="date" id="birthday" name="birthday">
-                    <label for="birthday">Salida</label>
-                    <input type="date" id="birthday" name="birthday">
-                    <input type="submit" value="Reservar">
-                    </form>
-                    <div>
-                    *resultado reserva
-                    </div>
-                </div>
-                </div>
-```
-}*/
-
 document.addEventListener("DOMContentLoaded", function() {
     const fechaLlegadaInput = document.getElementById("fechaLlegada");
     const fechaSalidaInput = document.getElementById("fechaSalida");
@@ -80,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
 btnComprobar.addEventListener("click", function() {
 
     mostrarModal("Hay disponibilidad para las fechas seleccionadas.");
@@ -99,37 +76,3 @@ window.addEventListener("click", function(event) {
         modalFactibilidad.style.display = "none";
     }
 });
-
-
-
-/*let loginForm1 = document.getElementById("form-habitacion-1");
-let loginForm2 = document.getElementById("form-habitacion-2");
-
-loginForm1.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const dates = loginForm1.getElementsByTagName('input')
-
-    let mensajeReserva = ''
-    mensajeReserva += 'Gracias por su reserva!' + '</br>'
-    mensajeReserva += 'Fecha de entrada: ' + dates[0].value + '</br>'
-    mensajeReserva += 'Fecha de salida: ' + dates[1].value
-
-    resultDiv = loginForm1.getElementsByClassName('resultado-reserva')[0]
-
-    resultDiv.innerHTML = mensajeReserva
-});*/
-
-
-/*loginForm2.addEventListener("submit", (e) => {
-    e.preventDefault();
-   const dates = loginForm2.getElementsByTagName('input')
-
-    let mensajeReserva = ''
-    mensajeReserva += 'Gracias por su reserva!' + '</br>'
-    mensajeReserva += 'Fecha de entrada: ' + dates[0].value + '</br>'
-    mensajeReserva += 'Fecha de salida: ' + dates[1].value
-
-    resultDiv = loginForm2.getElementsByClassName('resultado-reserva')[0]
-
-    resultDiv.innerHTML = mensajeReserva
-})*/
